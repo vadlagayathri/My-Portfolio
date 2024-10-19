@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s;
+}
+.education-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.education-item {
+    background: #222;
+    padding: 15px; /* Adjust padding */
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* Center text */
+    width: 200px; /* Set fixed width for each box */
+    max-width: 200px; /* Max width */
+}
+
+.education-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #333; /* Darken background on hover */
+}
+
+.education-item h3 {
+    color: #00bcd4; /* Heading color */
+}
+
+.education-item p {
+    margin: 5px 0; /* Space between paragraphs */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.education-item:hover p {
+    color: #fff; /* Change text color on hover */
+}
+
+header {
+    background: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: center; /* Center items */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #00bcd4; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+    border-radius: 5px;
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: left; /* Align text to the left */
+}
+
+.profile-photo {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-content p {
+    max-width: 600px; /* Limit the width of the paragraph */
+}
+
+
+.container {
+    max-width: 1250px; /* Adjust the max width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add space between items */
+}
+
+.work {
+    text-align: center; /* Center the text under the images */
+}
+
+.work img {
+    display: block; /* Ensure the images are treated as block elements */
+    margin: 0 auto; /* Center the images */
+}
+h1, h2, h3 {
+    text-align: center; 
+    text-transform: uppercase;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    font-size: 24px; /* Adjust heading size for all devices */
+}
+
+h1 span {
+    color: #fff;
+}
+
+section {
+    padding: 60px 0; /* Adjust padding for all devices */
+    text-align: center;
+}
+
+.skills-grid,
+.work-list,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill, .work, .project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover, .work:hover, .project-card:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), black);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #00bcd4;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #00bcd4;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent; /* Default background */
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+    cursor: pointer;
+    font-size: 18px; 
+}
+
+.btn:hover {
+    background-color: #00bcd4; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px; /* Increase input font size */
+    border-radius: 6px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #00bcd4;
+    transform: translate(-5px);
+}
+
+/* Contact section styles */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for mobile */
+    justify-content: center; /* Center content */
+}
+
+.contact-left, .contact-right {
+    flex: 1 1 300px; /* Responsive widths */
+    margin: 10px; /* Space between sections */
+    text-align: center; /* Center text */
+}
+
+.contact-left p {
+    margin-top: 10px;
+    font-size: 18px; /* Increase font size for contact info */
+}
+
+.copyright {
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add padding for spacing */
+    background-color: #222; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 14px; /* Adjust font size */
+}
+
+.copyright p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .profile-photo {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .about-content p {
+        max-width: 100%; /* Allow paragraph to use full width */
+        text-align: center; /* Center align text */
+    }
+    nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+
+    .skills-grid,
+    .work-list,
+    .projects-grid {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .copyright {
+        font-size: 12px; /* Adjust copyright font size for smaller screens */
+    }
+}
+
